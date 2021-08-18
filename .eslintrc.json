@@ -1,0 +1,44 @@
+{
+  "extends": ["react-app", "eslint:recommended", "plugin:cypress/recommended", "prettier"],
+  "plugins": ["cypress"],
+  "settings": {
+    "react": {
+      "version": "16.8.6"
+    }
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "legacyDecorators": true
+    }
+  },
+  "rules": {
+    "indent": [
+      2,
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "linebreak-style": ["error", "windows"],
+    "quotes": [
+      "error",
+      "single",
+      {
+        "allowTemplateLiterals": true
+      }
+    ],
+    "semi": ["error", "never"],
+    "comma-dangle": ["error", "always-multiline"],
+    "no-useless-escape": "off",
+    "jsx-a11y/href-no-hash": "off",
+    "jsx-a11y/anchor-is-valid": [
+      "warn",
+      {
+        "aspects": ["invalidHref"]
+      }
+    ],
+    "object-curly-spacing": ["error", "always"],
+    "cypress/no-unnecessary-waiting": "off",
+    "no-console": "off"
+  }
+}

@@ -1,5 +1,5 @@
 import React from 'react'
-import { MuiThemeProvider, ThemeProvider } from '@material-ui/core'
+import { MuiThemeProvider } from '@material-ui/core/styles'
 
 import { Store } from 'App/Store'
 import { enumStore, POKEMON_API_IMAGE_URL, POKEMON_API_POKEMON_URL, POKEMON_API_TYPE_URL } from 'utils/constants'

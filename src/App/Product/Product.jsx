@@ -1,6 +1,6 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import { Typography, Button, Paper } from '@material-ui/core'
+import { Typography, Button, Paper, Divider } from '@material-ui/core'
 import { AiOutlineShoppingCart } from 'react-icons/ai'
 
 import { useStrings } from 'strings/context'
@@ -41,11 +41,10 @@ export const Product = ({ value }) => {
         </Typography>
         <Typography variant="h5">{priceString(value.price)}</Typography>
       </div>
-      {/* <Divider /> */}
+      <Divider />
       <Button color="primary" startIcon={<AiOutlineShoppingCart />} onClick={() => store.add(value)} fullWidth>
         {strings.add}
       </Button>
-      <button onClick={() => store.add(value)}>{strings.add}</button>
     </Paper>
   )
 }

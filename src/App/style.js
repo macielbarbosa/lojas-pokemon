@@ -3,6 +3,5 @@ export const style = theme => ({
     minHeight: '100vh',
     display: 'flex',
     justifyContent: 'center',
-    backgroundColor: theme.palette.primary.main,
   },
 })

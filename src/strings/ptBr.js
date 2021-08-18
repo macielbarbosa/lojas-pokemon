@@ -12,7 +12,6 @@ export const ptBr = {
   total: 'Total',
   thankYou: 'Obrigado!!!',
   youWonBack: 'Você ganhou de volta',
-  carkIsEmpty: 'O carrinho está vazio.',
   productNotFound: 'Nenhum produto foi encontrado.',
   selectStore: 'Selecione a loja',
 }

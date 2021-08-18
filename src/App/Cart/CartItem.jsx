@@ -1,10 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { makeStyles } from '@material-ui/core/styles'
-import { Checkbox, Typography } from '@material-ui/core'
+import { Checkbox, IconButton, Typography } from '@material-ui/core'
 
 import { useStore } from 'App/Store/context'
 import { priceString } from 'utils/functions'
+import { Delete } from '@material-ui/icons'
 
 const displayFlex = {
   display: 'flex',
@@ -30,7 +31,7 @@ export const CartItem = ({ product }) => {
       </div>
       <div>
         <Typography variant="body2">{priceString(product.price)}</Typography>
-        <button onClick={() => store.remove(product.id)}>remover</button>
+        <IconButton onClick={() => store.remove(product.id)}>{<Delete fontSize="small" />}</IconButton>
       </div>
     </div>
   )

@@ -1,7 +1,7 @@
 import { createTheme } from '@material-ui/core/styles'
-import { enumThemes } from './enumThemes'
+import { blue } from '@material-ui/core/colors'
 
-const textColor = '#eee'
+const TEXT_COLOR = 'rgba(0, 0, 0, 0.87)'
 
 export const waterTheme = createTheme({
   name: 'water',
@@ -26,27 +26,19 @@ export const waterTheme = createTheme({
       fontWeight: 400,
       color: 'rgb(51,51,51)',
     },
+    body1: {
+      color: TEXT_COLOR,
+    },
+    body1: {
+      color: TEXT_COLOR,
+    },
   },
   palette: {
     primary: {
-      light: '#54647b',
-      main: '#293a4f',
-      dark: '#001427',
+      main: blue[800],
+      dark: blue[900],
       contrastText: '#fff',
     },
-    secondary: {
-      light: '#ffd75b',
-      main: '#ffa626',
-      dark: '#c67700',
-      contrastText: '#000000',
-    },
-    default: {
-      light: '#ffd75b',
-      main: '#ffa626',
-      dark: '#c67700',
-      contrastText: '#000000',
-    },
-    storeBackground: 'aliceblue',
-    text: textColor,
+    storeBackground: blue[50],
   },
 })

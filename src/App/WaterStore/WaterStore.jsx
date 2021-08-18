@@ -1,5 +1,5 @@
 import React from 'react'
-import { ThemeProvider } from '@material-ui/core'
+import { MuiThemeProvider } from '@material-ui/core/styles'
 
 import { Store } from 'App/Store'
 import { enumStore, POKEMON_API_IMAGE_URL, POKEMON_API_POKEMON_URL, POKEMON_API_TYPE_URL } from 'utils/constants'
@@ -20,13 +20,13 @@ const standardizeCatalog = response =>
 
 export const WaterStore = () => {
   return (
-    <ThemeProvider theme={waterTheme}>
+    <MuiThemeProvider theme={waterTheme}>
       <Store
         variant={enumStore.water}
         catalogUrl={POKEMON_API_TYPE_URL + '/water'}
         productUrl={POKEMON_API_POKEMON_URL}
         standardizeCatalog={standardizeCatalog}
       />
-    </ThemeProvider>
+    </MuiThemeProvider>
   )
 }

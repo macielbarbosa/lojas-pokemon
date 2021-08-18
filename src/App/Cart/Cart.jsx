@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { Divider, Typography, Button } from '@material-ui/core'
+import { AiOutlineShopping } from 'react-icons/ai'
 
 import { useStrings } from 'strings/context'
 import { useStore } from 'App/Store/context'
@@ -62,22 +63,21 @@ export const Cart = () => {
         ))}
       </div>
       <Divider />
-      {/* <Button
-        className={classes.finish}
-        color="primary"
-        startIcon={<AiOutlineShopping />}
-        onClick={() => store.add(value)}
-        fullWidth
-      >
-        {strings.finish}
-      </Button> */}
       <div className={classes.total}>
         <Typography variant="body2">{strings.total}</Typography>
         <Typography variant="body2">{priceString(total)}</Typography>
       </div>
-      <button disabled={!total} onClick={onFinish}>
+      <Button
+        className={classes.finish}
+        color="primary"
+        startIcon={<AiOutlineShopping />}
+        onClick={onFinish}
+        disabled={!total}
+        fullWidth
+        variant="contained"
+      >
         {strings.finish}
-      </button>
+      </Button>
       <ThankYouDialog open={openDialog} onClose={() => setOpenDialog(false)}>
         <Typography variant="body1">
           {strings.youWonBack} {priceString(totalPurchase)}.

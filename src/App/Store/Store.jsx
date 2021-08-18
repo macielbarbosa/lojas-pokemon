@@ -12,6 +12,9 @@ import { Cart } from 'App/Cart'
 export class StoreComponent extends Component {
   static propTypes = {
     variant: PropTypes.string.isRequired,
+    catalogUrl: PropTypes.string.isRequired,
+    productUrl: PropTypes.string.isRequired,
+    standardizeCatalog: PropTypes.func.isRequired,
   }
 
   constructor(props) {

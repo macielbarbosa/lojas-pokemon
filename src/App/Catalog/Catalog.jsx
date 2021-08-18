@@ -58,7 +58,7 @@ export class CatalogComponent extends Component {
     return (
       <div className={classes.root}>
         {products.length > 0 ? (
-          [this.products[0]].map((product, index) => <Product key={index} value={product} />)
+          this.products.map((product, index) => <Product key={index} value={product} />)
         ) : (
           <Typography variant="body1">{strings.productNotFound}</Typography>
         )}
