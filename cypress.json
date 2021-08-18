@@ -1,0 +1,6 @@
+{
+  "projectId": "ezhrud",
+  "chromeWebSecurity": false,
+  "integrationFolder": "src",
+  "video": false
+}

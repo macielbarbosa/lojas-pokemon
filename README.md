@@ -1,1 +1,1 @@
-# lojas-pokemon
+# Lojas Pokemon

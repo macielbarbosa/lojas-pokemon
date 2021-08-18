@@ -1,0 +1,1 @@
+export { FireStore } from './FireStore'
