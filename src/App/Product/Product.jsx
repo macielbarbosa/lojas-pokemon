@@ -1,17 +1,9 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import Paper from '@material-ui/core/Paper'
-import List from '@material-ui/core/List'
-import ListItem from '@material-ui/core/ListItem'
-import ListItemText from '@material-ui/core/ListItemText'
-import Divider from '@material-ui/core/Divider'
-import Typography from '@material-ui/core/Typography'
+import { Typography, Button, Paper } from '@material-ui/core'
 import { AiOutlineShoppingCart } from 'react-icons/ai'
 
 import { useStrings } from 'strings/context'
-import { useHistory } from 'react-router'
-import { Button } from '@material-ui/core'
-
 import { useStore } from 'App/Store/context'
 import { priceString } from 'utils/functions'
 
@@ -50,9 +42,9 @@ export const Product = ({ value }) => {
         <Typography variant="h5">{priceString(value.price)}</Typography>
       </div>
       {/* <Divider /> */}
-      {/* <Button color="primary" startIcon={<AiOutlineShoppingCart />} onClick={() => store.add(value)} fullWidth>
+      <Button color="primary" startIcon={<AiOutlineShoppingCart />} onClick={() => store.add(value)} fullWidth>
         {strings.add}
-      </Button> */}
+      </Button>
       <button onClick={() => store.add(value)}>{strings.add}</button>
     </Paper>
   )
