@@ -9,7 +9,7 @@ import { priceString } from 'utils/functions'
 import { CartItem } from './CartItem'
 import { ThankYouDialog } from './ThankYouDialog'
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     minWidth: 300,
     display: 'flex',
@@ -52,7 +52,7 @@ export const Cart = () => {
   }
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} id="cart">
       <Typography className={classes.title} variant="h6">
         {strings.cart}
       </Typography>
@@ -68,6 +68,7 @@ export const Cart = () => {
         <Typography variant="body2">{priceString(total)}</Typography>
       </div>
       <Button
+        id="cart-finalize-button"
         className={classes.finish}
         color="primary"
         startIcon={<AiOutlineShopping />}

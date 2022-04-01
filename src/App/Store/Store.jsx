@@ -27,14 +27,14 @@ export class StoreComponent extends Component {
     }
   }
 
-  setCart = cart => {
+  setCart = (cart) => {
     localStorage.setItem('cart-' + this.props.variant, cart)
     this.setState({ cart })
   }
 
-  add = value => {
+  add = (value) => {
     const { cart } = this.state
-    const isIncluded = cart.some(product => product.id === value.id)
+    const isIncluded = cart.some((product) => product.id === value.id)
     if (!isIncluded) {
       value.checked = true
       const cart = [...this.state.cart, value]
@@ -42,26 +42,26 @@ export class StoreComponent extends Component {
     }
   }
 
-  remove = id => {
+  remove = (id) => {
     const { cart } = this.state
-    const index = cart.findIndex(product => product.id === id)
+    const index = cart.findIndex((product) => product.id === id)
     cart.splice(index, 1)
     this.setCart(cart)
   }
 
-  toggleChecked = id => {
+  toggleChecked = (id) => {
     const { cart } = this.state
-    const index = cart.findIndex(product => product.id === id)
+    const index = cart.findIndex((product) => product.id === id)
     cart[index].checked = !cart[index].checked
     this.setCart(cart)
   }
 
   finish = () => {
     const { cart } = this.state
-    this.setCart(cart.filter(product => !product.checked))
+    this.setCart(cart.filter((product) => !product.checked))
   }
 
-  onChangeSearch = event => {
+  onChangeSearch = (event) => {
     this.setState({ search: event.target.value })
   }
 
@@ -94,6 +94,7 @@ export class StoreComponent extends Component {
               placeholder={strings.search}
               onChange={this.onChangeSearch}
               fullWidth
+              id="store-search-input"
             />
             <div className={classes.section}>
               <Catalog />

@@ -42,7 +42,13 @@ export const Product = ({ value }) => {
         <Typography variant="h5">{priceString(value.price)}</Typography>
       </div>
       <Divider />
-      <Button color="primary" startIcon={<AiOutlineShoppingCart />} onClick={() => store.add(value)} fullWidth>
+      <Button
+        id="store-add-button"
+        color="primary"
+        startIcon={<AiOutlineShoppingCart />}
+        onClick={() => store.add(value)}
+        fullWidth
+      >
         {strings.add}
       </Button>
     </Paper>

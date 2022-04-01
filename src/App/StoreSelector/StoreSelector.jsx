@@ -25,13 +25,13 @@ export const StoreSelector = () => {
       <div className={classes.root}>
         <Paper>
           <List component="nav" subheader={<ListSubheader component="div">{strings.selectStore}</ListSubheader>}>
-            <ListItem button onClick={() => history.push('/agua')}>
+            <ListItem id="store-selector-agua" button onClick={() => history.push('/agua')}>
               <ListItemText primary={strings.water} />
             </ListItem>
-            <ListItem button onClick={() => history.push('/fogo')}>
+            <ListItem id="store-selector-fogo" button onClick={() => history.push('/fogo')}>
               <ListItemText primary={strings.fire} />
             </ListItem>
-            <ListItem button onClick={() => history.push('/dragao')}>
+            <ListItem id="store-selector-dragao" button onClick={() => history.push('/dragao')}>
               <ListItemText primary={strings.dragon} />
             </ListItem>
           </List>

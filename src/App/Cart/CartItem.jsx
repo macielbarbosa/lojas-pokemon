@@ -24,14 +24,21 @@ export const CartItem = ({ product }) => {
   const classes = useStyles()
   const store = useStore()
   return (
-    <div className={classes.root}>
+    <div className={classes.root} id="cart-item">
       <div>
-        <Checkbox checked={product.checked} color="primary" onChange={() => store.toggleChecked(product.id)} />
+        <Checkbox
+          id="cart-checkbox"
+          checked={product.checked}
+          color="primary"
+          onChange={() => store.toggleChecked(product.id)}
+        />
         <Typography variant="body2">{product.name}</Typography>
       </div>
       <div>
         <Typography variant="body2">{priceString(product.price)}</Typography>
-        <IconButton onClick={() => store.remove(product.id)}>{<Delete fontSize="small" />}</IconButton>
+        <IconButton id="cart-remove-button" onClick={() => store.remove(product.id)}>
+          {<Delete fontSize="small" />}
+        </IconButton>
       </div>
     </div>
   )
